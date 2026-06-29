@@ -39,21 +39,15 @@
   <style>
     :root {
       --dark: #020617;
-      --dark-2: #07111f;
-      --dark-3: #0f172a;
-      --white: #ffffff;
       --page: #f8fafc;
       --text: #0f172a;
       --muted: #475569;
       --muted-2: #64748b;
       --border: #e5e7eb;
-      --soft-border: #edf2f7;
       --blue: #2563eb;
       --sky: #60a5fa;
       --purple: #8b5cf6;
       --violet: #a855f7;
-      --green: #10b981;
-      --red: #dc2626;
       --shadow: 0 24px 70px rgba(15, 23, 42, 0.10);
       --shadow-2: 0 18px 48px rgba(15, 23, 42, 0.09);
       --radius: 26px;
@@ -107,8 +101,6 @@
     .skip-link:focus {
       left: 12px;
     }
-
-    /* HERO */
 
     .hero {
       min-height: 720px;
@@ -426,12 +418,6 @@
       box-shadow: 0 18px 42px rgba(79, 70, 229, 0.35);
     }
 
-    .btn-secondary {
-      color: white;
-      background: rgba(255, 255, 255, 0.04);
-      border-color: rgba(255, 255, 255, 0.22);
-    }
-
     .btn .arrow {
       transition: 0.25s ease;
     }
@@ -447,8 +433,6 @@
     .btn-primary:hover {
       box-shadow: 0 24px 60px rgba(79, 70, 229, 0.45);
     }
-
-    /* MAIN */
 
     main {
       max-width: var(--max);
@@ -783,56 +767,21 @@
 
     .edu-content {
       display: grid;
-      grid-template-columns: 120px 1fr 1fr;
+      grid-template-columns: 86px 1fr 1fr;
       gap: 24px;
       align-items: center;
     }
 
-    .city-logo {
-      width: 110px;
-      height: 110px;
+    .edu-icon {
+      width: 86px;
+      height: 86px;
       border-radius: 24px;
       display: grid;
       place-items: center;
-      background: linear-gradient(145deg, #dc2626, #991b1b);
-      color: white;
-      box-shadow: 0 18px 45px rgba(220, 38, 38, 0.24);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .city-logo::before {
-      content: "";
-      position: absolute;
-      inset: -20px;
-      background: radial-gradient(circle at top left, rgba(255,255,255,0.35), transparent 45%);
-    }
-
-    .city-logo-inner {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      line-height: 1;
-    }
-
-    .city-logo-inner .crest {
-      font-size: 30px;
-      margin-bottom: 7px;
-      display: block;
-    }
-
-    .city-logo-inner strong {
-      display: block;
-      font-size: 22px;
-      letter-spacing: 0.06em;
-    }
-
-    .city-logo-inner span {
-      display: block;
-      font-size: 9px;
-      margin-top: 5px;
-      letter-spacing: 0.08em;
-      opacity: 0.9;
+      background: linear-gradient(135deg, #eef2ff, #f5f3ff);
+      color: #4f46e5;
+      font-size: 38px;
+      box-shadow: 0 16px 36px rgba(79, 70, 229, 0.12);
     }
 
     .education-card h3 {
@@ -906,28 +855,8 @@
     .footer-inner {
       max-width: var(--max);
       margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 22px;
-      flex-wrap: wrap;
       font-size: 14px;
     }
-
-    .footer-link {
-      color: white;
-      font-weight: 900;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: 0.2s;
-    }
-
-    .footer-link:hover {
-      color: #93c5fd;
-    }
-
-    /* RESPONSIVE */
 
     @media (max-width: 980px) {
       .ai-wave {
@@ -945,7 +874,7 @@
       }
 
       .edu-content {
-        grid-template-columns: 115px 1fr;
+        grid-template-columns: 86px 1fr;
       }
 
       .edu-notes {
@@ -1051,11 +980,6 @@
         text-align: center;
         justify-items: center;
       }
-
-      .city-logo {
-        width: 100px;
-        height: 100px;
-      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -1107,10 +1031,6 @@
       "Robotics",
       "Autonomous Systems",
       "Cloud AI Systems"
-    ],
-    "sameAs": [
-      "https://www.linkedin.com/in/pravesh-gpr-01274736b/",
-      "https://github.com/Rockstarr06"
     ]
   }
   </script>
@@ -1194,9 +1114,6 @@
 
       <div class="hero-actions">
         <a class="btn btn-primary" href="#projects">View Projects <span class="arrow">↗</span></a>
-        <a class="btn btn-secondary" href="https://github.com/Rockstarr06" target="_blank" rel="noopener noreferrer">
-          GitHub
-        </a>
       </div>
     </div>
   </section>
@@ -1388,13 +1305,7 @@
         <h2 class="section-title">Education</h2>
 
         <div class="edu-content">
-          <div class="city-logo" aria-label="City University of London visual badge">
-            <div class="city-logo-inner">
-              <span class="crest">🏛️</span>
-              <strong>CITY</strong>
-              <span>UNIVERSITY<br />OF LONDON</span>
-            </div>
-          </div>
+          <div class="edu-icon" aria-hidden="true">🎓</div>
 
           <div>
             <h3>City, University of London</h3>
@@ -1438,15 +1349,7 @@
 
   <footer>
     <div class="footer-inner">
-      <span>© 2026 Pravesh GPR. AI Engineer • London.</span>
-
-      <a class="footer-link" href="https://www.linkedin.com/in/pravesh-gpr-01274736b/" target="_blank" rel="noopener noreferrer">
-        LinkedIn
-      </a>
-
-      <a class="footer-link" href="https://github.com/Rockstarr06" target="_blank" rel="noopener noreferrer">
-        GitHub
-      </a>
+      © 2026 Pravesh GPR. AI Engineer • London.
     </div>
   </footer>
 
